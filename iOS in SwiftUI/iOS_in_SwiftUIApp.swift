@@ -12,6 +12,7 @@ struct iOS_in_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .persistentSystemOverlays(.hidden)
         }
     }
 }

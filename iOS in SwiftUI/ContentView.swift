@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var systemManager = SystemManager.shared
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            LockScreenView()
+            HomeIndicator()
         }
-        .padding()
     }
 }
 
